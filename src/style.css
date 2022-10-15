@@ -23,6 +23,10 @@ li {
   list-style: none;
 }
 
+li::first-letter {
+  text-transform: capitalize;
+}
+
 .weather-app-wrapper {
   max-width: 600px;
   margin: 30px auto;
