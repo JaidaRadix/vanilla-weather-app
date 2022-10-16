@@ -24,35 +24,44 @@
             <div class="col-3 p-0">
               <input type="submit" value="Search" class="btn btn-primary w-100" />
             </div>
+          </div>
         </form>
         <div class="overview">
-          <h1 id="city"></h1>
-          <ul>
-            <li>
-              Last updated: <span id="date"></span>
-            </li>
-            <li id="description"></li>
-          </ul>
-        </div>
-        <div class="row">
-          <div class="col-md-6">
-            <div class="d-flex weather-temperature">
-              <img src="#" alt="#" id="icon" class="float-left">
-              <div class="float-left">
-                <strong id="temperature"></strong><span class="units"><a href="#" id="celsius-link"
-                    class="active">°C</a> | <a href="#" id="farenheit-link">°F</a></span>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="card">
+                <div class="card-body">
+                  <h1 id="city"></h1>
+                  <ul>
+                    <li>
+                      Last updated: <span id="date"></span>
+                    </li>
+                    <li id="description"></li>
+                  </ul>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="col-md-6">
-            <ul>
-              <li>
-                Humidity: <span id="humidity"></span>%
-              </li>
-              <li>
-                Wind: <span id="wind"></span> mph
-              </li>
-            </ul>
+            <div class="col-md-5">
+              <div class="d-flex weather-temperature">
+                <img src="#" alt="#" id="icon" class="float-left">
+                <div class="float-left">
+                  <strong id="temperature"></strong><span class="units"><a href="#" id="celsius-link"
+                      class="active">°C</a> | <a href="#" id="farenheit-link">°F</a></span>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-7">
+                <ul>
+                  <li>
+                    Humidity: <span id="humidity"></span>%
+                  </li>
+                  <li>
+                    Wind: <span id="wind"></span> mph
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
       </div>
