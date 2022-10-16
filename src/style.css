@@ -1,4 +1,13 @@
 body {
+  background: linear-gradient(
+    2.1deg,
+    rgb(116, 253, 210) 5%,
+    rgb(0, 191, 247) 95.8%
+  );
+  background-attachment: fixed;
+  background-position: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
   font-family: arial, sans-serif;
 }
 
@@ -7,7 +16,13 @@ h1 {
   font-size: 38px;
   font-weight: 700;
   line-height: 48px;
-  margin: 20px 0 10px;
+}
+
+h2 {
+  color: #000080;
+  font-size: 32px;
+  font-size: 700;
+  font-family: "Montserrat", sans-serif;
 }
 
 ul {
@@ -19,7 +34,6 @@ li {
   color: #878787;
   font-size: 16px;
   font-weight: 500;
-  line-height: 20px;
   list-style: none;
 }
 
@@ -27,31 +41,63 @@ li::first-letter {
   text-transform: capitalize;
 }
 
+a {
+  text-decoration: none;
+}
+
+.app {
+  margin: 60px auto;
+  max-width: 800px;
+}
+
 .weather-app-wrapper {
-  max-width: 600px;
+  max-width: 605px;
   margin: 30px auto;
 }
 
 .weather-app {
-  padding: 20px;
+  background-color: #fff;
+  padding: 20px 40px;
   border: 1px solid #dadde1;
-  border-radius: 5px;
+  border-radius: 15px;
+  box-shadow: 0 30px 50px #41326421;
+}
+
+.weather-app img {
+  max-width: 90px;
+  margin-right: 5px;
+  margin-bottom: 8px;
+}
+
+.weather-app form {
+  border-bottom: 2px solid #f9f7fe;
+  margin-top: 20px;
+  padding-bottom: 25px;
+}
+
+#city-input {
+  background-color: #f9f7fe;
 }
 
 .overview {
-  margin-bottom: 20px;
+  margin: 25px 0 5px;
+}
+
+.weather-description {
+  color: red;
+  font-weight: bold;
+  font-size: 18px;
 }
 
 .weather-temperature img {
-  margin-right: 5px;
-  height: 64px;
-  width: 64px;
+  margin: 15px 2px 15px 15px;
 }
 
 .weather-temperature strong {
   color: #212121;
+  font-family: "Montserrat", sans-serif;
   font-size: 64px;
-  line-height: 1;
+  line-height: 2;
   font-weight: 400;
 }
 
@@ -68,4 +114,15 @@ li::first-letter {
 
 .weather-temperature .active:hover {
   text-decoration: none;
+}
+
+.weather-conditions {
+  line-height: 1.7;
+  margin-top: 20px;
+  padding-left: 30px;
+}
+
+.conditions {
+  color: #000080;
+  font-weight: 500;
 }
