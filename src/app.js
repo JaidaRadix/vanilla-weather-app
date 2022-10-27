@@ -44,8 +44,8 @@ function displayForecast(response) {
         <div class="weather-forecast-date">${formateDay(forecastDay.time)}</div>
         <img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${
           forecastDay.condition.icon
-        }.png" alt="" width="50">
-        <div class="weather-forecast-tempertures">
+        }.png" alt="" width="80">
+        <div class="weather-forecast-temperatures">
           <span class="weather-forecast-temperature-max">${Math.round(
             forecastDay.temperature.maximum
           )}°</span> | 
