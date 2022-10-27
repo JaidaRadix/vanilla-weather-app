@@ -23,7 +23,7 @@
             <span>
               <img
                 src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/048/903/original/weather-logo.png?1665936573"
-                alt="Weather App">
+                alt="Weather App" id="app-logo">
               Weather App
             </span>
           </h2>
@@ -40,20 +40,32 @@
           </form>
           <div class="overview">
             <div class="row">
-              <div class="col-md-6">
-                <div class="card">
-                  <div class="card-body">
-                    <h1 id="city"></h1>
-                    <ul>
-                      <li>
-                        Last updated: <span id="date"></span>
-                      </li>
-                      <li id="description" class="weather-description"></li>
-                    </ul>
+              <div class="col-md-4">
+                <div class="location">
+                  <div class="card">
+                    <div class="card-body">
+                      <h1 id="city"></h1>
+                      <ul>
+                        <li>
+                          Last updated: <div id="date"></div>
+                        </li>
+                      </ul>
+                    </div>
                   </div>
                 </div>
               </div>
-              <div class="col-md-6">
+              <div class="col-md-3">
+                <ul class="weather-conditions">
+                  <li id="description" class="weather-description"></li>
+                  <li>
+                    Humidity: <span class="conditions"><span id="humidity"></span>%</span>
+                  </li>
+                  <li>
+                    Wind: <span class="conditions"><span id="wind"></span> mph</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-md-5">
                 <div class="d-flex weather-temperature">
                   <img src="#" alt="#" id="icon" class="float-left">
                   <div class="float-left">
@@ -65,14 +77,6 @@
                   </div>
                 </div>
               </div>
-              <ul class="weather-conditions">
-                <li>
-                  Humidity: <span class="conditions"><span id="humidity"></span>%</span>
-                </li>
-                <li>
-                  Wind: <span class="conditions"><span id="wind"></span> mph</span>
-                </li>
-              </ul>
             </div>
           </div>
           <div class="weather-forecast" id="forecast"></div>
