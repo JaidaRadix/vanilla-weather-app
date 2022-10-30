@@ -68,6 +68,19 @@ function getForecast(coordinates) {
   axios.get(apiUrl).then(displayForecast);
 }
 
+function switchTheme(description) {
+  console.log(description);
+  if (description.includes("clear sky")) {
+    document.querySelector(
+      ".body"
+    ).style.background = `url ("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/050/570/original/clear-sky.jpg?1667048635")`;
+  } else if (description.includes("clouds")) {
+    document.querySelector(
+      ".body"
+    ).style.background = `url ("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/050/570/original/clear-sky.jpg?1667048635")`;
+  }
+}
+
 function displayTemperature(response) {
   let temperatureElement = document.querySelector("#temperature");
   let cityElement = document.querySelector("#city");
@@ -92,6 +105,7 @@ function displayTemperature(response) {
   iconElement.setAttribute("alt", response.data.condition.description);
 
   getForecast(response.data.coordinates);
+  switchTheme(descriptionElement.innerHTML);
 }
 
 function search(city) {
