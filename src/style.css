@@ -95,6 +95,11 @@ a {
   margin-top: 20px;
 }
 
+.card-body {
+  padding-right: 1px;
+  padding-left: 8px;
+}
+
 #date {
   font-weight: 700;
 }
@@ -119,6 +124,7 @@ a {
 .weather-temperature {
   justify-content: flex-end;
   margin-top: 5px;
+  padding-right: 2px;
 
 }
 
