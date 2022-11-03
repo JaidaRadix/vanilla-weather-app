@@ -70,14 +70,30 @@ function getForecast(coordinates) {
 
 function switchTheme(description) {
   console.log(description);
-  if (description.includes("clear sky")) {
+  if (description.includes("clear")) {
     document.querySelector(
-      ".body"
-    ).style.background = `url ("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/050/570/original/clear-sky.jpg?1667048635")`;
+      "body"
+    ).style.backgroundImage = `url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/050/570/original/clear-sky.jpg?1667048635")`;
   } else if (description.includes("clouds")) {
     document.querySelector(
-      ".body"
-    ).style.background = `url ("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/050/570/original/clear-sky.jpg?1667048635")`;
+      "body"
+    ).style.backgroundImage = `url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/050/578/original/cloudy-sky.gif?1667054317")`;
+  } else if (description.includes("rain")) {
+    document.querySelector(
+      "body"
+    ).style.backgroundImage = `url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/051/194/original/rain-day.gif?1667407038")`;
+  } else if (description.includes("thunderstorm")) {
+    document.querySelector(
+      "body"
+    ).style.backgroundImage = `url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/051/317/original/thunderstorm-day.gif?1667481882")`;
+  } else if (description.includes("snow")) {
+    document.querySelector(
+      "body"
+    ).style.backgroundImage = `url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/051/221/original/snow-day.gif?1667413058")`;
+  } else if (description.includes("mist")) {
+    document.querySelector(
+      "body"
+    ).style.backgroundImage = `url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/051/311/original/mist-day.gif?1667475837")`;
   }
 }
 
@@ -105,7 +121,7 @@ function displayTemperature(response) {
   iconElement.setAttribute("alt", response.data.condition.description);
 
   getForecast(response.data.coordinates);
-  switchTheme(descriptionElement.innerHTML);
+  switchTheme(response.data.condition.icon);
 }
 
 function search(city) {
