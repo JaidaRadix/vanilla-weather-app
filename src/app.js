@@ -73,51 +73,51 @@ function switchTheme(description) {
   if (description.includes("clear") && description.includes("day")) {
     document.querySelector(
       "body"
-    ).style.backgroundImage = `url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/050/570/original/clear-sky.jpg?1667048635")`;
+    ).style.backgroundImage = `url(images/day/clear-sky-day.jpg)`;
   } else if (description.includes("clear")) {
     document.querySelector(
       "body"
-    ).style.backgroundImage = `url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/051/309/original/clear-night-sky.gif?1667474012")`;
+    ).style.backgroundImage = `url(images/night/clear-night-sky.gif)`;
   } else if (description.includes("clouds") && description.includes("day")) {
     document.querySelector(
       "body"
-    ).style.backgroundImage = `url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/050/578/original/cloudy-sky.gif?1667054317")`;
+    ).style.backgroundImage = `url(images/day/cloudy-sky.gif)`;
   } else if (description.includes("clouds")) {
     document.querySelector(
       "body"
-    ).style.backgroundImage = `url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/051/308/original/clouds-night-sky.gif?1667473269")`;
+    ).style.backgroundImage = `url(images/night/clouds-night-sky.gif)`;
   } else if (description.includes("rain") && description.includes("day")) {
     document.querySelector(
       "body"
-    ).style.backgroundImage = `url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/051/194/original/rain-day.gif?1667407038")`;
+    ).style.backgroundImage = `url(images/day/rain-day.gif)`;
   } else if (description.includes("rain")) {
     document.querySelector(
       "body"
-    ).style.backgroundImage = `url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/051/201/original/rain-night.gif?1667409487")`;
+    ).style.backgroundImage = `url(images/night/rain-night.gif)`;
   } else if (description.includes("thunderstorm") && description.includes("day")) {
     document.querySelector(
       "body"
-    ).style.backgroundImage = `url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/051/317/original/thunderstorm-day.gif?1667481882")`;
+    ).style.backgroundImage = `url(images/day/thunderstorm-day.gif)`;
   } else if (description.includes("thunderstorm")) {
     document.querySelector(
       "body"
-    ).style.backgroundImage = `url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/051/313/original/thunderstorm-night.gif?1667477123")`;
+    ).style.backgroundImage = `url(images/night/thunderstorm-night.gif)`;
   } else if (description.includes("snow") && description.includes("day")) {
     document.querySelector(
       "body"
-    ).style.backgroundImage = `url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/051/221/original/snow-day.gif?1667413058")`;
+    ).style.backgroundImage = `url(images/day/snow-day.gif)`;
   } else if (description.includes("snow")) {
     document.querySelector(
       "body"
-    ).style.backgroundImage = `url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/051/312/original/snow-night.gif?1667476669")`;
+    ).style.backgroundImage = `url(images/night/snow-night.gif)`;
   } else if (description.includes("mist") && description.includes("day")) {
     document.querySelector(
       "body"
-    ).style.backgroundImage = `url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/051/311/original/mist-day.gif?1667475837")`;
+    ).style.backgroundImage = `url(images/day/mist-day.gif)`;
   } else if (description.includes("mist")) {
     document.querySelector(
       "body"
-    ).style.backgroundImage = `url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/051/199/original/mist.gif?1667408122")`;
+    ).style.backgroundImage = `url(images/night/mist.gif)`;
   }
 }
 
