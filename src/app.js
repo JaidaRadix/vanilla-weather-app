@@ -121,7 +121,7 @@ function switchTheme(description) {
   }
 }
 
-function displayTemperature(response) {
+function displayTemperature(response, fromChange = false) {
   let temperatureElement = document.querySelector("#temperature");
   let cityElement = document.querySelector("#city");
   let descriptionElement = document.querySelector("#description");
@@ -134,9 +134,11 @@ function displayTemperature(response) {
 
   temperatureElement.innerHTML = Math.round(temperature);
   cityElement.innerHTML = response.data.city;
-  descriptionElement.innerHTML = response.data.condition.description;
-  humidityElement.innerHTML = response.data.temperature.humidity;
-  windElement.innerHTML = Math.round(response.data.wind.speed);
+  if (!fromChange) {
+    descriptionElement.innerHTML = response.data.condition.description;
+    humidityElement.innerHTML = response.data.temperature.humidity;
+    windElement.innerHTML = Math.round(response.data.wind.speed);
+  }
   dateElement.innerHTML = formatDate(response.data.time * 1000);
   iconElement.setAttribute(
     "src",
@@ -148,16 +150,16 @@ function displayTemperature(response) {
   switchTheme(response.data.condition.icon);
 }
 
-function search(city) {
+function search(city, fromChange = false) {
   let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=${units}`;
-
-  axios.get(apiUrl).then(displayTemperature);
+  axios
+    .get(apiUrl)
+    .then((response) => displayTemperature(response, fromChange));
 }
 
 function handleSubmit(event) {
   event.preventDefault();
   cityInputElement = document.querySelector("#city-input").value;
-
   search(cityInputElement);
 }
 
@@ -172,7 +174,7 @@ function convertToFahrenheit(event) {
   celsiusLink.classList.remove("active");
   fahrenheitLink.classList.add("active");
   units = "imperial";
-  search(cityInputElement);
+  search(cityInputElement, true);
 }
 
 function convertToCelsius(event) {
@@ -180,7 +182,7 @@ function convertToCelsius(event) {
   fahrenheitLink.classList.remove("active");
   celsiusLink.classList.add("active");
   units = "metric";
-  search(cityInputElement);
+  search(cityInputElement, true);
 }
 
 let temperature = null;
