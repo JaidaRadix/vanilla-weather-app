@@ -166,7 +166,13 @@ function handleSubmit(event) {
 function showPosition(coordinates) {
   let apiUrl = `https://api.shecodes.io/weather/v1/current?lon=${coordinates.longitude}&lat=${coordinates.latitude}&key=${apiKey}&units=${units}`;
 
-  axios.get(apiUrl).then(displayWeather);
+  axios.get(apiUrl).then(displayTemperature);
+}
+
+function getCurrentLocation(event) {
+  event.preventDefault();
+
+  navigator.geolocation.getCurrentPosition(showPosition);
 }
 
 function convertToFahrenheit(event) {
@@ -192,6 +198,9 @@ let cityInputElement = "London";
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
+
+let currentLocation = document.querySelector("#current-location");
+currentLocation.addEventListener("click", getCurrentLocation);
 
 let fahrenheitLink = document.querySelector("#fahrenheit-link");
 fahrenheitLink.addEventListener("click", convertToFahrenheit);
