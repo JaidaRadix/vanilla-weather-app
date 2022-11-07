@@ -69,7 +69,6 @@ function getForecast(coordinates) {
 }
 
 function switchTheme(description) {
-  console.log(description);
   if (description.includes("clear") && description.includes("day")) {
     document.querySelector(
       "body"
