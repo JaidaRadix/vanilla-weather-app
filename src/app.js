@@ -163,8 +163,8 @@ function handleSubmit(event) {
   search(cityInputElement);
 }
 
-function showPosition(coordinates) {
-  let apiUrl = `https://api.shecodes.io/weather/v1/current?lon=${coordinates.longitude}&lat=${coordinates.latitude}&key=${apiKey}&units=${units}`;
+function showPosition(position) {
+  let apiUrl = `https://api.shecodes.io/weather/v1/current?lon=${position.coords.longitude}&lat=${position.coords.latitude}&key=${apiKey}&units=${units}`;
 
   axios.get(apiUrl).then(displayTemperature);
 }
